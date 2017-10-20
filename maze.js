@@ -15,6 +15,11 @@ var tes = false; //keep track if the user hit any maze walls.
  
      t.addEventListener("mouseover",gameEnd);
 
+      var y = document.getElementById("start"); 
+
+      y.addEventListener("click", gameStart); 
+
+
 
  
      var a = document.querySelectorAll("div#maze div.boundary");  
@@ -92,4 +97,32 @@ var tes = false; //keep track if the user hit any maze walls.
 
 
  
-  } 
+  }
+  function gameStart() { 
+
+
+ 
+  flag = false; 
+
+
+ 
+    var a = document.querySelectorAll("div#maze div.boundary"); 
+
+
+ 
+  for (var ab= 0; ab < a.length; ab++){ 
+
+
+ 
+         a[ab].setAttribute("class", "boundary"); 
+
+
+ 
+      } 
+  
+}
+
+
+ 
+
+
