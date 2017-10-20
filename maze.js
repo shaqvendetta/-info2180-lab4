@@ -9,3 +9,26 @@ window.onload = function(){
  	});	
 
  };
+ 
+ function redWall(){
+
+
+var ab=document.querySelectorAll("div#maze div.boundary");
+
+for(var n;n<ab.lenght;n++){
+
+  ab[n].setAttribute("class","boundary youlose")
+}
+
+
+}
+
+
+
+ 
+ var ab =document.querySelectorAll("div#maze div.boundary");
+  
+  for(var n;n<ab.lenght;n++){
+  	ab[n].addEventListener("mouseover", redWall);
+  }
+}
