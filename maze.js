@@ -25,6 +25,13 @@ window.onload = function(){
  
     b.addEventListener("mouseover", gameEnd); 
 
+       var c = document.getElementById("start"); 
+
+
+ 
+    c.addEventListener("click", gameStart); 
+
+
 
 var ab = document.querySelectorAll("div#maze div.boundary");
 
@@ -59,16 +66,18 @@ function redWall(){
 
 
  function gameEnd(){
+ 	var star = document.getElementById("status");
 
   if (flag){
 	
 	alert("Sorry, You lost");
-
+    star.innerHTML = "Sorry, You lost";
 
 }else {
 
 	
 	alert("Good Job! You win");
+	star.innerHTML = "Good Job! You win"
 
 }
 
