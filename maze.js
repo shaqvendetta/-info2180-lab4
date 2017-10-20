@@ -1,10 +1,39 @@
 window.onload = function () {
-	var a =document.getElementById("boundary1");
-	a.addEventListener("mouseover", redWall);
-	}
+	var a = document.querySelectorAll("div#maze div.boundary"); 
 
-function redWall () {
-	var a = document.getElementById("boundary1");
-	a.setAttribute("class", "boundary youlose");
 
+ 
+for (var ab = 0; ab< a.length; ab++){ 
+
+
+
+		a[ab].addEventListener("mouseover", redWall); 
+
+
+ 
+	} 
+
+
+ 
+} 
+
+
+ 
+ function redWall() { 
+
+
+ 
+    var a = document.querySelectorAll("div#maze div.boundary"); 
+
+
+ 
+    for (var ab = 0; ab < a.length; ab++){ 
+
+
+ 
+       a[ab].setAttribute("class", "boundary youlose"); 
+
+
+ 
+    } 
 }
