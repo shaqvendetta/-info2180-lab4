@@ -1,39 +1,95 @@
-window.onload = function () {
-	var a = document.querySelectorAll("div#maze div.boundary"); 
+var tes = false; //keep track if the user hit any maze walls. 
 
 
  
-for (var ab = 0; ab< a.length; ab++){ 
-
-
-
-		a[ab].addEventListener("mouseover", redWall); 
+  
 
 
  
-	} 
+ window.onload = function() { 
 
 
  
-} 
+     var t= document.getElementById("end");
+
+ 
+     t.addEventListener("mouseover",gameEnd);
 
 
  
- function redWall() { 
+     var a = document.querySelectorAll("div#maze div.boundary");  
+     for (var ab = 0; ab< a.length; ab++){ 
 
-
- 
-    var a = document.querySelectorAll("div#maze div.boundary"); 
 
 
  
-    for (var ab = 0; ab < a.length; ab++){ 
+		       a[ab].addEventListener("mouseover", redWall);
+
+ 
+     } 
 
 
  
-       a[ab].setAttribute("class", "boundary youlose"); 
+ }; 
 
 
  
-    } 
-}
+ 
+
+
+ 
+ function redWall() {
+
+
+ 
+ 	tes = true; 
+
+ 
+      var a = document.querySelectorAll("div#maze div.boundary"); 
+
+
+ 
+    
+    for (var ab = 0; ab < a.length; ab++){  
+
+
+ 
+         a[ab].setAttribute("class", "boundary youlose"); 
+
+ 
+     } 
+
+
+  } 
+
+
+ 
+
+
+
+ function gameEnd(){
+ 
+
+
+ 
+     if(tes) { 
+
+
+ 
+        
+     alert("Sorry, You lost"); 
+
+
+    } else { 
+
+
+ 
+       alert("Good Job! You win");
+
+
+ 
+      } 
+
+
+ 
+  } 
