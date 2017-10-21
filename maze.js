@@ -73,23 +73,24 @@ var tes = false; //keep track if the user hit any maze walls.
 
 
  function gameEnd(){
+
  
 
-
+ 	var star = document.getElementById("status");
  
      if(tes) { 
 
 
  
         
-     alert("Sorry, You lost"); 
+     star.innerHTML("Sorry, You lost"); 
 
 
     } else { 
 
 
  
-       alert("Good Job! You win");
+       star.innerHTML("Good Job! You win");
 
 
  
